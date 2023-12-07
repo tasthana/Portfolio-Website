@@ -1,13 +1,13 @@
 #ifndef GRAPHICS_ENGINE_H
 #define GRAPHICS_ENGINE_H
 
-#include <GLFW/glfw3.h>
 #include <iostream>
 #include <memory>
 #include <vector>
 
 #include "../shapes/cube.h"
 #include "shaderManager.h"
+#include "GLFW/glfw3.h"
 
 using std::vector, std::unique_ptr, std::make_unique, glm::ortho, glm::cross,
     glm::mat4, glm::vec3, glm::vec4;
@@ -23,7 +23,7 @@ private:
   GLFWwindow *window{};
 
   /// @brief The width and height of the window.
-  const unsigned int width = 800, height = 600; // Window dimensions
+  const unsigned int width = 1000, height = 800; // Window dimensions
 
   /// @brief Keyboard state (True if pressed, false if not pressed).
   /// @details Index this array with GLFW_KEY_{key} to get the state of a key.
@@ -106,6 +106,9 @@ public:
   /// @return true if the window should close
   /// @return false if the window should not close
   bool shouldClose();
+
+  float cubeX = 0.0f;
+  float initialX = -10.0f;
 };
 
 #endif // GRAPHICS_ENGINE_H
