@@ -1,0 +1,72 @@
+
+
+img{
+   max-width: 80%;
+}
+
+p{
+    max-width: 70ch;
+}
+
+figure {
+    padding: 7%;
+    font-size: smaller;
+}
+
+img.scaled {
+    width: 100%;
+}
+
+figcaption{
+    max-width: 70ch;
+}
+
+ol{
+    margin-left: 40%;
+    padding-left: 0.04%;
+}
+
+.button:hover{
+  border: 1.5em solid rgb(15, 77, 23);
+  border-radius: 15em;
+  box-shadow: 5em 5em 5em rgb(14, 54, 19);
+  text-shadow: none;
+}
+
+
+input[type="text"]{
+    padding: 13em 25em;
+    margin: 15em;
+    box-sizing: border-box;
+  }
+
+  .contact{
+    font-size: small;
+  }
+
+  .radio{
+    font-size: small;
+  }
+
+  .checkbox{
+    font-size: small;
+  }
+
+  .activePage{
+    background-color: #175a0e;
+}
+
+video{
+    width: 30%;
+    height:380px;
+    background-color:black;
+  
+}
+
+.marquee {
+    display: block;
+    max-height: 20%;
+    background: #fefefe;
+    color: #333;
+    border: 1em solid whitesmoke;
+}

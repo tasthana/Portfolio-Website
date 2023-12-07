@@ -146,8 +146,7 @@ void Engine::render() {
 
   // Rotate cube if arrow keys are pressed
   model = glm::rotate(model, rotateX, glm::vec3(1.0f, 0.0f, 0.0f));
-  // TODO: rotate the model matrix around the y axis
-    model = glm::rotate(model, rotateY, glm::vec3(0.0f, 1.0f, 0.0f));
+  model = glm::rotate(model, rotateY, glm::vec3(0.0f, 1.0f, 0.0f));
   // Move the camera back 3 units to view the cube (otherwise we would be inside
   // it)
   view = glm::translate(view, glm::vec3(0.0f, 0.0f, cameraZ));

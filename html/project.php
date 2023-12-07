@@ -1,0 +1,99 @@
+<?php
+    include 'top.php';
+?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#hide").click(function(){
+        $("iframe").hide();
+    });
+    $("#show").click(function(){
+        $("iframe").show();
+    });
+    });
+</script>
+
+
+        <main>
+            <h1>Projects</h1>
+
+            <section>
+                <h2>Breakout Game</h2>
+                <p>
+                This program is a simple Breakout game implemented in C++ using the OpenGL graphics framework (GLFW).
+                The game involves controlling a paddle to bounce a ball and break bricks on the screen. 
+                The user interacts with the game using keyboard inputs to move the paddle.
+                <a href="https://github.com/tasthana/Breakout-Game"> GitHub Repo </a>
+                </p>
+            </section>
+
+            <section>
+                <h2>Magic Mirror Project</h2>
+                <p>
+                This project used Linux terminal and a Raspberry Pi to code. 
+                Using base code from the Magic Mirror GitHub, a friend and I created 3 new modules customizable by the user.
+                Working in Linux to allow seamless implementation through a Raspberry Pi 4 to project on screen, and designs to create a
+                working mirror. 
+                <a href="https://docs.google.com/document/d/1-vfp00XKZUh5r9Bf9F7TaeGr5i_xVfxKgy5nN-Hfktg/edit?usp=sharing"> Project Proposal </a>
+                </p>
+            </section>
+            
+            <section>
+                <h2>Travel Website</h2>
+                <p>
+                This site featured three pages, an introduction page, countries that I have visited, and a form. I used HTML5 to create the structure of the page, 
+                CSS to style it, and PHP to include some backend features of storage for my form page and tables that I had displayed. My form would also send 
+                an email with a heartfelt response to whomever filled out the form! 
+                <a href="https://github.com/tasthana/CS-008"> Github Repo </a>
+
+                </p>
+            </section>
+
+            <section>
+                <h2>PyCharm Robot</h2>
+                <p>
+                Using PyCharm to simulate the effects of Earth's gravity, I coded a robot using Python. 
+                Written in over a 1000 lines of code were the robots brain, body, and neurons and sensors that allowed 
+                the user (me) to analyze the speed of the robot and the smoothness of its gait. The robot was evolved using a fitness function, to allow the best 
+                combination of angles and brain activity to provide accurate data for the question behind my final project. Is more legs better for speed or not? 
+                I modeled my robot after a spider, and created three variants, a 4 legged robot, a 6 legged one, and an 8 legged robot. The final presentation 
+                included a paper with my full analysis and answer to my question, alongside a 2 minute presentation in class using graphs to prove my point. 
+                <a href="https://github.com/tasthana/cs206/tree/finalProject"> Github Repo </a>
+                </p>
+            </section>
+
+            <section>
+                <h5>Hide videos!</h5>
+                <button id="hide">Hide</button>
+                <button id="show">Show</button>
+            </section>
+
+            <section>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dPV3Wgne5pg" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1WVBWNtozRE" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-f4d7-7a_rQ" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+
+
+            </section>
+            
+
+        </main>
+
+    <?php
+        include 'footer.php';
+    ?>
+
+</html>

@@ -1,0 +1,36 @@
+:root{
+
+    --main-bg-color: black;
+    --main-text-color: #ffffff; 
+
+}
+
+*{
+    margin:  1% 1% 1% 1%;
+    padding: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html{
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    
+}
+
+p{
+    text-indent: 5%;
+    text-align: left;
+    max-width: 75ch;
+}
+
+button{
+    background-color: red;
+    color: white;
+    border: 2px solid #bd0e0e;
+}
+
+
+#putTextHere{
+    border:1px solid white; 
+    padding: .5em
+}
