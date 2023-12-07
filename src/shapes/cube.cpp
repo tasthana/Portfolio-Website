@@ -33,33 +33,26 @@ void Cube::draw(const mat4& model, const mat4& view, const mat4& projection) con
 
 void Cube::initVectors() {
     this->vertices.insert(this->vertices.end(), {
-            // Each row contains x, y, z, r, g, b values for position and color
-            // Front face
-             0.5f,  0.5f,  0.5f, 0.0f, 0.0f, 1.0f, // Top right, blue
-            -0.5f,  0.5f,  0.5f, 1.0f, 1.0f, 0.0f, // Top left, yellow
-             0.5f, -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Bottom right, green
-            -0.5f, -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Bottom left, red
-            // TODO: add vertices for the back face
-            // Back face
-            // Top right, white
-            // Top left, gray
-            // Bottom right, cyan
-            // Bottom left, magenta
+            // Arrow body
+            0.0f,  0.5f,  0.0f, 0.0f, 0.0f, 1.0f, // Top center, blue
+            -0.2f, -0.5f,  0.0f, 1.0f, 0.0f, 0.0f, // Bottom left, red
+            0.2f, -0.5f,  0.0f, 1.0f, 0.0f, 0.0f, // Bottom right, red
+
+            // Arrowhead
+            0.0f,  0.7f,  0.0f, 1.0f, 0.0f, 0.0f, // Top center, red
+            -0.2f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, // Bottom left, red
+            0.2f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, // Bottom right, red
     });
 
     this->indices.insert(this->indices.end(), {
-        // Each face lists the indices of the vertices as two triangles
-        // TODO: complete the other five faces
-            // Front face
+            // Arrow body
             0, 1, 2,
-            2, 3, 1,
-            // Right face
-            // Back face
-            // Left face
-            // Bottom face
-            // Top face
+
+            // Arrowhead
+            3, 4, 5
     });
 }
+
 
 void Cube::initVAO() {
     glGenVertexArrays(1, &this->VAO);
