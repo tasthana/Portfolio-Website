@@ -1,4 +1,5 @@
 #include "engine.h"
+#include "GLFW/glfw3.h"
 
 Engine::Engine() : keys(), cameraZ(-3.0f) {
   this->initWindow();
@@ -56,17 +57,15 @@ void Engine::initShaders() {
 }
 
 void Engine::initShapes() {
-  cube =
-      make_unique<Cube>(shapeShader, vec3(0.0f, 0.0f, 0.0f),
-                        vec3(0.5f, 0.5f, 0.5f), color(1.0f, 0.0f, 0.0f, 1.0f));
+    cube = make_unique<Cube>(shapeShader, vec3(-initialX, 0.0f, 0.0f), vec3(0.5f, 0.5f, 0.5f), color(1.0f, 0.0f, 0.0f, 1.0f));
 }
 
 void Engine::initMatrices() {
   // The view matrix is the camera's position and orientation in the world
   // We start at (0, 0, 3) and look at (0, 0, 0) with the up vector being (0, 1,
   // 0)
-  view = lookAt(vec3(0.0f, 0.0f, 3.0f), vec3(0.0f, 0.0f, 0.0f),
-                vec3(0.0f, 1.0f, 0.0f));
+  view = lookAt(vec3(3.0f, 3.0f, 3.0f), vec3(3.0f, 3.0f, 3.0f),
+                vec3(3.0f, 1.0f, 3.0f));
   // The projection matrix for 3D is distorted by 45 degrees to give a
   // perspective view
   projection = glm::perspective(
@@ -93,12 +92,16 @@ void Engine::processInput() {
   // Rotating the cube up rotates around the x-axis, so we update rotateX
   if (keys[GLFW_KEY_UP])
       rotateX += 0.1f;
-  // TODO: Complete rotation with other three arrow keys
-
-  // TODO: When the user presses g, move the camera forward
-  //       to make the cube appear bigger
-  // TODO: When the user presses s, move the camera backward
-  //       to make the cube appear smaller
+  if (keys[GLFW_KEY_DOWN])
+      rotateX -= 0.1f;
+  if (keys[GLFW_KEY_LEFT])
+      rotateY -= 0.1f;
+  if (keys[GLFW_KEY_RIGHT])
+      rotateY += 0.1f;
+  if (keys[GLFW_KEY_G])
+      cameraZ -= 0.1f;
+    if (keys[GLFW_KEY_S])
+        cameraZ += 0.1f;
 }
 
 void Engine::update() {
@@ -107,12 +110,32 @@ void Engine::update() {
   deltaTime = currentFrame - lastFrame;
   lastFrame = currentFrame;
 
-  // Resetting model and view matrices every frame prevents the cube from
-  // spinning
-  model = glm::mat4(1.0f);
-  view = glm::mat4(1.0f);
+    // Move the cube in a sinusoidal path
+    float movementSpeed = 1.0f; // Adjust the speed as needed
+    float frequency = 1.0f;    // Adjust the frequency of the sinusoidal motion
 
+    cubeX += movementSpeed * deltaTime;
 
+    // Use a sinusoidal function to determine the X-coordinate
+    float maxX = 3.0f;  // Adjust as needed (right side of the screen)
+    if (cubeX > maxX) {
+        cubeX = -initialX;  // Reset to the initial position on the left side
+    }
+
+    float sinValue = glm::sin(frequency * cubeX);
+    float yOffset = 0.5f; // Adjust the amplitude of the sinusoidal motion
+    float newX = cubeX;
+    float newY = yOffset * sinValue;
+
+    // Resetting model and view matrices every frame prevents the cube from spinning
+    model = glm::mat4(1.0f);
+    view = glm::mat4(1.0f);
+
+    // Translate the cube using the modified coordinates
+    model = glm::translate(model, glm::vec3(newX, newY, 0.0f));
+
+    // Render the cube
+    render();
 }
 
 void Engine::render() {
@@ -124,7 +147,7 @@ void Engine::render() {
   // Rotate cube if arrow keys are pressed
   model = glm::rotate(model, rotateX, glm::vec3(1.0f, 0.0f, 0.0f));
   // TODO: rotate the model matrix around the y axis
-
+    model = glm::rotate(model, rotateY, glm::vec3(0.0f, 1.0f, 0.0f));
   // Move the camera back 3 units to view the cube (otherwise we would be inside
   // it)
   view = glm::translate(view, glm::vec3(0.0f, 0.0f, cameraZ));
