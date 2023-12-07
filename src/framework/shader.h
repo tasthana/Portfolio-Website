@@ -1,7 +1,7 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include <glad/glad.h>
+#include </Users/tusharasthana/Desktop/Senior Year /CS 2300/final/test/lib/glad/include/glad/glad.h>
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 using std::string, std::ifstream, std::stringstream, std::cout, std::endl;
