@@ -1,9 +1,10 @@
 #ifndef SHADER_H
 #define SHADER_H
 
+#include </Users/tusharasthana/Desktop/Senior Year /CS 2300/final/test/lib/glm/glm/glm.hpp>
 #include </Users/tusharasthana/Desktop/Senior Year /CS 2300/final/test/lib/glad/include/glad/glad.h>
-#include <glm/gtc/type_ptr.hpp>
-#include <iostream>
+#include </Users/tusharasthana/Desktop/Senior Year /CS 2300/final/test/lib/glm/glm/gtc/type_ptr.hpp>
+#include </Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream>
 using std::string, std::ifstream, std::stringstream, std::cout, std::endl;
 
 /// @brief General purpose shader object.
