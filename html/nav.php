@@ -36,5 +36,10 @@
 }
     ?>" href="readme.php">Read Me!</a>
 
+<a class= "<?php
+    if ($pathParts['filename'] == "form"){
+        print 'activePage';
+}
+    ?>" href="form.php">Form</a>
 
 </nav>
