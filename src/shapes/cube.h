@@ -18,6 +18,8 @@ public:
     void draw(const mat4& model, const mat4& view, const mat4& projection) const;
     void setUniforms(const mat4& model, const mat4& view, const mat4& projection) const;
 
+    void setScale(const vec3 &scale);
+
 private:
     Shader shader;
     vec3 pos;
@@ -36,6 +38,8 @@ private:
     void initVAO();
     void initVBO();
     void initEBO();
+    glm::vec3 scale;
+
 };
 
 

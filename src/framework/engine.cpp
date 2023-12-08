@@ -134,6 +134,10 @@ void Engine::update() {
     // Translate the cube using the modified coordinates
     model = glm::translate(model, glm::vec3(newX, newY, 0.0f));
 
+    float scaleSpeed = 0.5f;
+    float scaleValue = 0.5f + 0.5f * glm::sin(scaleSpeed * cubeX);
+    cube->setScale(glm::vec3(scaleValue, scaleValue, scaleValue));
+
     // Render the cube
     render();
 }

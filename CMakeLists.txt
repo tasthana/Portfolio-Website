@@ -37,34 +37,31 @@ endif()
 
 # Set include directories
 include_directories(lib/glfw/include
-                    lib/glad/include
-                    lib/glm
-                    lib/stb)
+        lib/glad/include
+        lib/glm
+        lib/stb)
 
 # Set source files
 file(GLOB VENDORS_SOURCES lib/glad/src/glad.c)
 file(GLOB_RECURSE PROJECT_HEADERS ${B_TARGET}/*.h)
 file(GLOB_RECURSE PROJECT_SOURCES ${B_TARGET}/*.cpp)
 file(GLOB PROJECT_CONFIGS CMakeLists.txt
-                          Readme.md
-                         .gitattributes
-                         .gitignore
-                         .gitmodules)
+        Readme.md
+        .gitattributes
+        .gitignore
+        .gitmodules)
 
 source_group("Headers" FILES ${PROJECT_HEADERS})
 source_group("Sources" FILES ${PROJECT_SOURCES})
 source_group("Vendors" FILES ${VENDORS_SOURCES})
 
 add_definitions(-DGLFW_INCLUDE_NONE
-                -DPROJECT_SOURCE_DIR=\"${PROJECT_SOURCE_DIR}\")
+        -DPROJECT_SOURCE_DIR=\"${PROJECT_SOURCE_DIR}\")
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES} ${PROJECT_HEADERS}
-                               ${PROJECT_SHADERS} ${PROJECT_CONFIGS}
-                               ${VENDORS_SOURCES} Testing-Website-tasthana/test_cases.cpp)
+        ${PROJECT_SHADERS} ${PROJECT_CONFIGS}
+        ${VENDORS_SOURCES})
 
 target_link_libraries(${PROJECT_NAME} glfw )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
-
-find_package(Crow)
-target_link_libraries(your_project PUBLIC Crow::Crow)

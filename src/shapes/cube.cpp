@@ -78,3 +78,7 @@ void Cube::initEBO() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, this->indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 }
+
+void Cube::setScale(const glm::vec3& scale) {
+    this->scale = scale;
+}
