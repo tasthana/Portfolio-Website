@@ -30,5 +30,11 @@
 }
     ?>" href="extra.php">Extracurriculars</a>
 
+<a class= "<?php
+    if ($pathParts['filename'] == "readme"){
+        print 'activePage';
+}
+    ?>" href="readme.php">Read Me!</a>
+
 
 </nav>
