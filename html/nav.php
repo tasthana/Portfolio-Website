@@ -42,10 +42,5 @@
 }
     ?>" href="form.php">Form</a>
 
-<a class= "<?php
-    if ($pathParts['filename'] == "process"){
-        print 'activePage';
-}
-    ?>" href="../Testing-Website-tasthana/process.php</a>
 
 </nav>

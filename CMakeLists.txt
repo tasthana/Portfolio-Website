@@ -60,8 +60,11 @@ add_definitions(-DGLFW_INCLUDE_NONE
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES} ${PROJECT_HEADERS}
                                ${PROJECT_SHADERS} ${PROJECT_CONFIGS}
-                               ${VENDORS_SOURCES})
+                               ${VENDORS_SOURCES} Testing-Website-tasthana/test_cases.cpp)
 
 target_link_libraries(${PROJECT_NAME} glfw )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
+
+find_package(Crow)
+target_link_libraries(your_project PUBLIC Crow::Crow)
