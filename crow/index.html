@@ -1,122 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> ePortfolio! </title>
+        <meta name="author" content="Tushar Asthana">
+        <meta name="description" content="An ePortfolio website to show off my resume.">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">        
+        <link rel="stylesheet" href="css/custom.css" type="text/css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var currentPage = window.location.pathname.split('/').pop().split('.')[0];
+    
+                var navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(function (link) {
+                    var linkPage = link.getAttribute('href').split('/').pop().split('.')[0];
+    
+                    if (linkPage === currentPage) {
+                        link.classList.add('activePage');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="project.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="extra.html">Extracurriculars</a>
+        <a href="readme.html">Read Me!</a>
+        <a href="form.html">Form</a>
+    </nav>
+    <main>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Boost C++ Libraries</title>
-  <link rel="stylesheet" href="doc/src/boostbook.css" type="text/css" />
-</head>
+        <section class="gallery content">
+            <h2>A few pictures of me</h2>
 
-<body>
-  <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
-    <tr>
-      <td width="277">
-        <a href="index.html">
-        <img src="boost.png" alt="boost.png (6897 bytes)" align="middle" width="277" height="86" border="0"/></a></td>
-      <td width="337" align="middle">
-      <h2 style="text-align: center">
-      Release 1.83.0
-      </h2>
-      </td>
-    </tr>
-  </table>
+            <div class="marquee">
+                <img src="images/beach.jpg" alt="beach">
+                <img src="images/favpic.jpeg" alt="street in lisbon">
+                <img src="images/fitcheck2.jpeg" alt="hostel elevator">
+                <img src="images/lilsis.jpg" alt="cousin">
+                <img src="images/sebbie.jpg" alt="formal">
+                <img src="images/tushar-asthana.png" alt="skydive">
+                <img src="images/skydivedos.jpg" alt="friends">
+                <img src="images/beach3.jpeg" alt="cas cais">
+            </div>
 
-  <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" bgcolor="#D7EEFF" height="26" width="671">
-    <tr>
-      <td height="16" width="661"><a href="more/getting_started/index.html">Getting Started</a>&nbsp;&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="libs/libraries.htm">Libraries</a>&nbsp;&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="tools/index.html">Tools&nbsp;</a>&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="http://www.boost.org">Web Site</a>&nbsp;&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="http://www.boost.org/users/news/">News</a>&nbsp;&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="http://www.boost.org/community/">Community</a>&nbsp;&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="http://www.boost.org/users/faq.html">FAQ</a>&nbsp;&nbsp;<font color="#FFFFFF">&nbsp;
-      </font>&nbsp; <a href="more/index.htm">More Info</a></td>
-    </tr>
-  </table>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/tushar-asthana/"> LinkedIn</a></li>
+                <li><a href="https://github.com/tasthana"> GitHub</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Background</h2>
+            <p>
+            Hello all. My name is Tushar Asthana, and I was born November 21, 2001 in Gorakhpur, India. 
+            The first six years of my life were spent in Singapore, in a neighborhood called Chuan Park. At the age of 6, my family moved to Atlanta, Georgia, in the USA.
+            The following year and half were spent learning what it meant to live in America, going to school and making new friends in the Dunwoody Complex in Jefferson County.  
+            At the age of 7, my dad found a new job in a small town called South Burlington, Vermont. Vermont was not what we were used to at the time, but in the past 14 years, 
+            my family and I have learned to call it home!   
+            </p>
+        </section>
+        
+        <section>
+            <h2>Academics</h2>
+            <p>
+            Throughout my academic journey at the University of Vermont, I have developed a solid foundation in computer science principles, programming languages, and software development methodologies. 
+            My coursework has equipped me with a diverse skill set, including proficiency in languages such as Java, C++, and Python, as well as experience with web development and database management. 
+            Additionally, I have acquired knowledge in areas such as algorithms, data structures, and artificial intelligence, which have sharpened my problem-solving abilitiess. 
+            </p>
+        </section>
 
 
-  <h2 class="title">Welcome to the Boost C++ Libraries</h2>
+        <section>
+            <h2>Intrapersonal Skills</h2>
+            <p>
+            My communication and teamwork skills have been honed through various group projects and extracurricular activities. 
+            I thrive in collaborative environments and enjoy working with cross-functional teams to tackle complex challenges. 
+            I have been on many sports teams between tennis and basketball, as a player and leader both, and I have no problem playing either part. 
+            </p>
+        </section>
 
-  <p>Boost provides free peer-reviewed portable C++ source libraries.</p>
+    </main>
+    <footer>
+        <p><a href="https://www.gradescope.com/courses/547219">Final Project</a></p>
+        <p>Site made by Tushar Asthana</p>
+    </footer>
 
-  <p>We emphasize libraries that work well with the C++ Standard Library.
-  Boost libraries are intended to be widely useful, and usable across a broad
-  spectrum of applications. The <a href=
-  "http://www.boost.org/users/license.html">Boost license</a> encourages both
-  commercial and non-commercial use.</p>
-
-  <p>We aim to establish "existing practice" and provide reference
-  implementations so that Boost libraries are suitable for eventual
-  standardization. Ten Boost libraries are already included in the <a href=
-  "http://www.open-std.org/jtc1/sc22/wg21/">C++ Standards Committee's</a>
-  Library Technical Report (<a href=
-  "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1745.pdf">TR1</a>)
-  and will be included in the upcoming revision of the C++ Standard. More
-  Boost libraries are proposed for the upcoming <a href=
-  "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1810.html">TR2</a>.</p>
-
-  <h3>Changes in this release</h3>
-
-  <p>The release includes updates to many existing libraries.
-  See
-  <a href="https://www.boost.org/users/history/version_1_83_0.html">Release
-  History</a> for more information.</p>
-
-  <h3>Getting Started</h3>
-
-  <p>If Boost hasn't already been installed on your system, follow the
-  <a href="more/getting_started/index.html">Getting Started Guide</a> to
-  complete the installation. But if you've reached to this point by
-  installing Boost from a Windows pre-build executable or a pre-built Linux
-  and Unix distribution package, that's already been completed. Likewise, if
-  you're reading this on your organization's internal web server, the
-  installation is probably already complete.</p>
-
-  <h3>Contents</h3>
-
-  <p>The release directory tree contains almost all of Boost; documentation,
-  sources, headers, scripts, tools, and everything else a Boost user might
-  need!</p>
-
-  <h3>Library Documentation</h3>
-
-  <p>The starting point for the documentation of individual libraries is the
-  <a href="libs/libraries.htm">Libraries page</a>, which gives a brief
-  description of each library and links to its documentation.</p>
-
-  <h3>Web Site</h3>
-
-  <p>Some general interest or often changing Boost information lives only on
-  the <a href="http://www.boost.org">Boost web site</a>. The release contains
-  links to the site, so while browsing it you'll see occasional broken links
-  if you aren't connected to the Internet. But everything needed to use the
-  Boost libraries is contained within the release.</p>
-
-  <h3>Background</h3>
-
-  <p>Read the <a href="http://www.boost.org/users/">introductory material</a>
-  to help you understand what Boost is about and to help in educating your
-  organization about Boost.</p>
-
-  <h3>Community</h3>
-
-  <p>Boost welcomes and thrives on participation from a variety of
-  individuals and organizations. Many avenues for participation are available
-  in the <a href="http://www.boost.org/community/">Boost Community</a>.</p>
-
-  <div class="copyright-footer">
-    <p>Copyright &copy; 2008 Beman Dawes, Rene Rivera</p>
-
-    <p>Distributed under the Boost Software License, Version 1.0. (See
-    accompanying file <a href="LICENSE_1_0.txt">LICENSE_1_0.txt</a> or copy
-    at <a href=
-    "http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)</p>
-
-    <p>This software is <a href="http://www.opensource.org/">Open Source
-    Initiative</a> approved Open Source Software.</p>
-
-    <p>Open Source Initiative Approved is a trademark of the Open Source
-    Initiative.</p>
-  </div>
 </body>
 </html>

@@ -1,0 +1,282 @@
+:root {
+    --main-bg-color: whitesmoke;
+    --main-text-color: #ffffff;
+  }
+  
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 1fr 10% 80% 10% 1fr;
+    height: 100vh;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  p {
+    text-indent: 5%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Header styling */
+  header {
+    grid-row: 1; /* Move the header to the first row */
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 1% 0;
+    background-color: #d870c7;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  /* Two columns on each side */
+  .side-column {
+    grid-row: 2 / -2; 
+    background-color: #101132; 
+    background-size: cover; /* Adjust to cover the entire element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+  }
+  
+  .side-column.left {
+    grid-row: 2 / -2;
+    grid-column: 1 / 2;
+  
+  }
+  
+  .side-column.right {
+    grid-row: 2 / -2;
+    grid-column: -1 / -2;
+  
+  }
+  
+  
+  main {
+    grid-row: 3; /* Move the main to the third row */
+    grid-column: 3;
+  }
+  
+  
+  /* Footer styling */
+  footer {
+    grid-row: 4; /* Move the footer to the fourth row */
+    grid-column: 1 / -1;
+    padding: 1% 0;
+    text-align: center;
+    background-color: wheat;
+    color: white;
+  }
+  
+  footer:hover{
+    background-color: #d870c7;
+  }
+  
+  /* Nav styling */
+  nav {
+    text-align: center;
+    background-color:#101132;
+    color: white;
+    padding: 1% 0;
+    grid-row: 2; /* Move the nav to the second row */
+    grid-column: 1 / -1;
+  }
+  nav a {
+    background-color: #d870c7;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block; /* Display links horizontally */
+  }
+  
+  .gallery {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+  }
+  
+  .gallery img {
+    max-width: 100%;
+  }
+  
+  .content {
+    margin: 15px, 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25);
+  }
+  
+  .content figcaption img {
+    max-width: 50%; 
+    height: auto;
+  }
+  
+  figcaption{
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .content:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), translate(0px, -8px);
+  }
+  
+  h6 {
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  li {
+    padding-top: 5px;
+  }
+  
+  .buy-1 {
+    background: wheat;
+  }
+  
+  
+  nav a {
+    background-color: palevioletred;
+    color: wheat;
+    text-decoration: none;
+  }
+  
+  .marquee {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr)); /* Adjust the number of columns depending on number of pics kara sends*/
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .gallery .content h2{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: solid;
+  }
+  
+  @keyframes marqueeAnimation {
+    0% {
+        transform: translateX(-1000%);
+    }
+    100% {
+        transform: translateX(1300%);
+    }
+  }
+  
+  .marquee img {
+    margin-right: 20px;
+    animation: marqueeAnimation 10s linear infinite;
+    max-width: 70%; 
+  }
+  
+  .gallery {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+  }
+  
+  .gallery .content{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 1000px;
+  }
+  
+  .gallery .content img{
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .gallery-img {
+    max-width: 80%; 
+    height: 50%;
+  }
+  ul li{
+    text-align: center;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding-left: 1%;
+    padding-right: 7.25%;
+    margin-bottom: 20px; /* Adjust the margin-bottom to control the spacing between cards */
+  }
+  .row {
+    margin: 0 -5px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .button:hover{
+    background: #101132;
+    color: #fff;
+    border: 1em solid rgb(130, 41, 108);
+    border-radius: 23em;
+    box-shadow: 7em 7em 7em rgb(14, 54, 19);
+    text-shadow: none;
+    text-transform: lowercase;
+  }
+  
+  ul{
+    color: #101132;
+  }
+  
+   img{
+    border: #d870c7;
+    border-color: #d870c7;
+  
+  }
+  
+  h4{
+    color: gray;
+  }
+  
+  h2{
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #101132;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 350px; /* Set a fixed width */
+    height: 500px; /* Set a fixed height */
+    margin: auto;
+    background-color: #101132;
+    color: wheat;
+    text-align: center;
+    font-family: arial;
+    overflow: hidden; /* Ensure content doesn't overflow if height is exceeded */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative; /* Position relative for absolute positioning of child elements */
+    text-transform: capitalize;
+  }
+  
+  
+  .card img {
+    justify-content: center;
+    width: 80%; /* Set a fixed width for the images */
+    height: 70%; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    border-radius: 10%;
+    padding-top: 10px;
+  }
