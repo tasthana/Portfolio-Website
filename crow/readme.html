@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> ePortfolio! </title>
+        <meta name="author" content="Tushar Asthana">
+        <meta name="description" content="An ePortfolio website to show off my resume.">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">        
+        <link rel="stylesheet" href="css/custom.css" type="text/css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var currentPage = window.location.pathname.split('/').pop().split('.')[0];
+    
+                var navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(function (link) {
+                    var linkPage = link.getAttribute('href').split('/').pop().split('.')[0];
+    
+                    if (linkPage === currentPage) {
+                        link.classList.add('activePage');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="project.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="extra.html">Extracurriculars</a>
+        <a href="readme.html">Read Me!</a>
+    </nav>
+    <main>
+
+        <section class="gallery content">
+
+            <ul>
+                <li><a href="https://www.linkedin.com/in/tushar-asthana/"> LinkedIn</a></li>
+                <li><a href="https://github.com/tasthana"> GitHub</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <p>
+            Welcome to my ReadMe. My name is Tushar Asthana and I am the sole contributor. 
+            </p>
+        </section>
+        
+        <section>
+            <p>
+            The summary of this program is that I am using Crow cpp as my backend to serve as a localhost for my website that I built. 
+            The backend is build in C++ using app routes and image manipulation to incoporate some of the modules. My website is made out of 
+            html5, css and javascript, and is fully functioning. 
+
+            Back to the modules used, this project is more an experiment in what I can hold on to in my career as a web developer. 
+            It took me three days to figure out Crow. I took inspiration from the image manipulation project in module three, and have added it 
+            as tab to be used on the website. 
+
+            You will need to download Crow, Boost, and OpenCV2 from their websites respectively.  
+            </p>
+        </section>
+
+
+        <section>
+            <p>
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p><a href="https://www.gradescope.com/courses/547219">Final Project</a></p>
+        <p>Site made by Tushar Asthana</p>
+    </footer>
+
+</body>
+</html>
+
+
+- a summary of the program
+- a description of the concepts used and which modules they came from
+- the operating system(s) you have run the project on
+- any added installations necessary to run the program
+- any citations from code not authored by yourselves or the instructor
+- how many points you think you deserve, justified by the grading rubric we agree o
