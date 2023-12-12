@@ -1,8 +1,9 @@
 #include "crow.h"
 #include <fstream>
+#include "opencv2.framework/Headers/opencv.hpp"
+#include "opencv2.framework"
 
-int main()
-{
+int main() {
     crow::SimpleApp app;
 
     // Route to serve the index.html file
@@ -22,10 +23,9 @@ int main()
         return crow::response(content);
     });
 
-    // Route to serve the index.html file
-    CROW_ROUTE(app, "/")
+    // Route to serve the resume.html file
+    CROW_ROUTE(app, "/resume")
     ([]() {
-        // Read HTML content from file
         std::ifstream t("build/static/resume.html");
         if (!t.is_open()) {
             CROW_LOG_ERROR << "Failed to open HTML file!";
@@ -35,14 +35,12 @@ int main()
         std::string content((std::istreambuf_iterator<char>(t)),
                             std::istreambuf_iterator<char>());
 
-        // Return the HTML content directly
         return crow::response(content);
     });
 
-    // Route to serve the index.html file
-    CROW_ROUTE(app, "/")
+    // Route to serve the extra.html file
+    CROW_ROUTE(app, "/extra")
     ([]() {
-        // Read HTML content from file
         std::ifstream t("build/static/extra.html");
         if (!t.is_open()) {
             CROW_LOG_ERROR << "Failed to open HTML file!";
@@ -52,14 +50,12 @@ int main()
         std::string content((std::istreambuf_iterator<char>(t)),
                             std::istreambuf_iterator<char>());
 
-        // Return the HTML content directly
         return crow::response(content);
     });
 
-    // Route to serve the index.html file
-    CROW_ROUTE(app, "/")
+    // Route to serve the jobs.html file
+    CROW_ROUTE(app, "/jobs")
     ([]() {
-        // Read HTML content from file
         std::ifstream t("build/static/jobs.html");
         if (!t.is_open()) {
             CROW_LOG_ERROR << "Failed to open HTML file!";
@@ -69,14 +65,12 @@ int main()
         std::string content((std::istreambuf_iterator<char>(t)),
                             std::istreambuf_iterator<char>());
 
-        // Return the HTML content directly
         return crow::response(content);
     });
 
-    // Route to serve the index.html file
-    CROW_ROUTE(app, "/")
+    // Route to serve the project.html file
+    CROW_ROUTE(app, "/project")
     ([]() {
-        // Read HTML content from file
         std::ifstream t("build/static/project.html");
         if (!t.is_open()) {
             CROW_LOG_ERROR << "Failed to open HTML file!";
@@ -86,7 +80,6 @@ int main()
         std::string content((std::istreambuf_iterator<char>(t)),
                             std::istreambuf_iterator<char>());
 
-        // Return the HTML content directly
         return crow::response(content);
     });
 
