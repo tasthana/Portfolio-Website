@@ -1,46 +1,15 @@
-# 3D-Graphics
+Welcome to my ReadMe. My name is Tushar Asthana and I am the sole contributor. 
 
-For this lab, you will be working to draw and rotate a cube.
+The summary of this program is that I am using Crow cpp as my backend to serve as a localhost for my website that I built. 
+The backend is build in C++ using app routes and image manipulation to incoporate some of the modules. My website is made out of 
+html5, css and javascript, and is fully functioning. 
 
-You may work individually or with a partner of your choosing.
+Back to the modules used, this project is more an experiment in what I can hold on to in my career as a web developer. 
+It took me three days to figure out Crow. I took inspiration from the image manipulation project in module three, and have added it 
+as tab to be used on the website. I also have the code for my animation which I had discussed with Lisa, but unfortunately I couldn't figure out how to use Emscripten to actually have it render. The code is mostly from one of the guided projects in Module 4. 
 
-## Setup
+You will need to download Crow, Boost, and OpenCV2 from their websites respectively. I have included the links above. I am using a MacBook Pro, running Apple M2, and using vscode for all code. 
 
-Use this Guided Project template to create a new repository (see [GitHub-with-CLion](https://github.com/uvmcs2300f2023/GitHub-with-CLion) repo for directions).
-**Your repository must be named with the convention: 3D-Graphics-netid**, where netid is your UVM NetID username.
-* If you are collaborating, the format is 3D-Graphics-netid1-netid2. Have one partner create the repository and give the other partner access on GitHub: on the repository page, go to the Settings tab, choose Manage Access, and add the person with their GitHub username.
+I believe I should get around 150 points for this project. Professor Lisa and I never got a chance to really discuss the rubric i had decided on. I had to flip courses about a week ago, since I need middleware to actually run an animation on the server side in html, and it is really difficult. I have a fully stood up html website, created on a C++ app that I learned how to use about four days ago. I have an animation that I coded that I cannot implement on this app, and I have an image manipulation tab as well. 
 
-Remember to commit and push frequently.
-
-# Drawing the cube
-
-Below is a labeling of the indices of the cube at its starting position. It will be useful when drawing the faces.
-
-![Image of Cube](CubeCoords.png)
-
-One face of the cube have been drawn for you. It is the face that originally faces forward (with corners colored blue, yellow, green, and red) When you complete the other vertices, color them white, gray, cyan, and magenta.
-
-**Draw the other five faces of the cube.** This should be done in the Cube's ```initVectors``` method. This will require you to complete both the vertices and indices (see TODO comments). The order of the indices matters when drawing, so it's recommended that you draw one face of the cube at a time to ensure correct implementation.
-
-Note that you should not be able to see some faces until you implement rotation by different axes.
-
-# Rotating the cube
-
-Luckily for you, the Cube already has partially functioning x-rotation, which you can see by pressing the up arrow.
-
-**Implement rotation in the other x-direction and both y-directions.** This should be done by completing ```engine.cpp``'s TODOs.
-
-# Moving the camera
-
-The camera position has an effect on how big or small objects appear. The camera for this project is initially at (0, 0, -3), looking at the origin (0, 0, 0).
-
-**Move the camera forward and backward when the g and s keys are pressed, to make the cube appear bigger and smaller.** The TODOs for this are in `engine.cpp::processInput`.
-
-## Grading
-
-If you are collaborating, both partners have to submit the project.
-
-### Grading Rubric
-- [ ] (10 pts) Draw other five faces of the cube.
-- [ ] (6 pts) Rotate the cube with the other three arrow keys.
-- [ ] (4 pts) Move the camera forward and backward with the g and s keys.
+I have major code in c++ and have tried new things with c++, so I belive I have earned those points. 
