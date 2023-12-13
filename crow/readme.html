@@ -1,84 +1,102 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title> ePortfolio! </title>
-        <meta name="author" content="Tushar Asthana">
-        <meta name="description" content="An ePortfolio website to show off my resume.">
-        <meta name ="viewport" content="width=device-width, initial-scale=1.0">        
-        <link rel="stylesheet" href="css/custom.css" type="text/css">
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var currentPage = window.location.pathname.split('/').pop().split('.')[0];
-    
-                var navLinks = document.querySelectorAll('nav a');
-                navLinks.forEach(function (link) {
-                    var linkPage = link.getAttribute('href').split('/').pop().split('.')[0];
-    
-                    if (linkPage === currentPage) {
-                        link.classList.add('activePage');
-                    }
-                });
+<head>
+    <!-- Metadata for the document -->
+    <meta charset="utf-8">
+    <title>ePortfolio!</title>
+    <meta name="author" content="Tushar Asthana">
+    <meta name="description" content="An ePortfolio website to show off my resume.">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">        
+
+    <!-- Link to the custom CSS file for styling -->
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+
+    <!-- JavaScript to highlight active page in navigation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the current page name from the URL
+            var currentPage = window.location.pathname.split('/').pop().split('.')[0];
+
+            // Select all navigation links
+            var navLinks = document.querySelectorAll('nav a');
+            
+            // Loop through each link and add 'activePage' class if it matches the current page
+            navLinks.forEach(function (link) {
+                var linkPage = link.getAttribute('href').split('/').pop().split('.')[0];
+
+                if (linkPage === currentPage) {
+                    link.classList.add('activePage');
+                }
             });
-        </script>
-    </head>
-    <nav>
-        <a href="index.html">About Me</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="extra.html">Extracurriculars</a>
-        <a href="readme.html">Read Me!</a>
-    </nav>
-    <main>
+        });
+    </script>
+</head>
 
-        <section class="gallery content">
+<!-- Navigation links -->
+<nav>
+    <a href="index.html">About Me</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="project.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="extra.html">Extracurriculars</a>
+    <a href="readme.html">Read Me!</a>
+    <a href="upload.html">Image Manipulation!</a>
+</nav>
 
-            <ul>
-                <li><a href="https://www.linkedin.com/in/tushar-asthana/"> LinkedIn</a></li>
-                <li><a href="https://github.com/tasthana"> GitHub</a></li>
-            </ul>
-        </section>
+<main>
+    <!-- Gallery section with external links -->
+    <section class="gallery content">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/tushar-asthana/">LinkedIn</a></li>
+            <li><a href="https://github.com/tasthana">GitHub</a></li>
+            <li><a href="https://crowcpp.org/master/">CrowCpp</a></li>
+            <li><a href="https://www.boost.org">Boost</a></li>
+            <li><a href="https://opencv.org">OpenCv</a></li>
+        </ul>
+    </section>
 
-        <section>
-            <p>
-            Welcome to my ReadMe. My name is Tushar Asthana and I am the sole contributor. 
-            </p>
-        </section>
-        
-        <section>
-            <p>
-            The summary of this program is that I am using Crow cpp as my backend to serve as a localhost for my website that I built. 
-            The backend is build in C++ using app routes and image manipulation to incoporate some of the modules. My website is made out of 
-            html5, css and javascript, and is fully functioning. 
+    <!-- Introduction section -->
+    <section>
+        <p>
+            Welcome to my ReadMe. My name is Tushar Asthana, and I am the sole contributor.
+        </p>
+    </section>
+
+    <!-- Summary section -->
+    <section>
+        <p>
+            The summary of this program is that I am using Crow cpp as my backend to serve as a localhost for my website that I built.
+            The backend is built in C++ using app routes and image manipulation to incorporate some of the modules. My website is made out of 
+            HTML5, CSS, and JavaScript and is fully functioning.
 
             Back to the modules used, this project is more an experiment in what I can hold on to in my career as a web developer. 
-            It took me three days to figure out Crow. I took inspiration from the image manipulation project in module three, and have added it 
-            as tab to be used on the website. 
+            It took me three days to figure out Crow. I took inspiration from the image manipulation project in Module three, and have added it 
+            as a tab to be used on the website. I also have the code for my animation which I had discussed with Lisa, but unfortunately, I couldn't figure 
+            out how to use Emscripten to actually have it render. The code is mostly from one of the guided projects in Module 4.
+        </p>
+    </section>
 
-            You will need to download Crow, Boost, and OpenCV2 from their websites respectively.  
-            </p>
-        </section>
+    <!-- Additional details section -->
+    <section>
+        <p>
+            You will need to download Crow, Boost, and OpenCV2 from their websites respectively. I have included the links above. 
+            I am using a MacBook Pro, running Apple M2, and using vscode for all code. 
 
+            I believe I should get around 150 points for this project. Professor Lisa and I never got a chance to really discuss the rubric I had decided on.
+            I had to flip courses about a week ago, since I need middleware to actually run an animation on the server side in HTML, and it is really difficult.
+            I have a fully stood-up HTML website, created on a C++ app that I learned how to use about four days ago. I have an animation that I 
+            coded that I cannot implement on this app, and I have an image manipulation tab as well.
 
-        <section>
-            <p>
-            </p>
-        </section>
+            I have major code in C++ and have tried new things with C++, so I believe I have earned those points.
+        </p>
+    </section>
+</main>
 
-    </main>
-    <footer>
-        <p><a href="https://www.gradescope.com/courses/547219">Final Project</a></p>
-        <p>Site made by Tushar Asthana</p>
-    </footer>
+<!-- Footer information -->
+<footer>
+    <p><a href="http://127.0.0.1:18080/static/index.html">Final Project</a></p>
+    <p>Site made by Tushar Asthana</p>
+</footer>
 
 </body>
 </html>
-
-
-- a summary of the program
-- a description of the concepts used and which modules they came from
-- the operating system(s) you have run the project on
-- any added installations necessary to run the program
-- any citations from code not authored by yourselves or the instructor
-- how many points you think you deserve, justified by the grading rubric we agree o
