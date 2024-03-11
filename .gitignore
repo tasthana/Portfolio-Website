@@ -1,6 +1,0 @@
-build/
-cmake-build-debug/
-lib/
-.idea/
-.DS_Store
-.vscode/
